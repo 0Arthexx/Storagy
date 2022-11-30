@@ -1,7 +1,5 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
-import 'package:storagy/home_page.dart';
+import 'package:storagy_2/main_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -9,47 +7,57 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff01B49F),
+      backgroundColor: const Color(0xff01B49F),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              "STORAGY",
-              style: TextStyle(
-                fontSize: 40,
-                fontWeight: FontWeight.w900,
-                color: Color(0xffFFFFFF),
-              ),
-            ),
-            Image(
-              image: AssetImage("../assets/logo.png"),
-            ),
-            Text(
-              "LOGINs",
-              style: TextStyle(
-                fontSize: 40,
-                fontWeight: FontWeight.w900,
-                color: Color(0xff454545),
-              ),
-            ),
-            // TF(),
             Container(
-              margin: EdgeInsets.fromLTRB(0, 50, 0, 0),
+              child: const Text(
+                "STORAGY",
+                style: TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.w900,
+                  color: Color(0xffFFFFFF),
+                ),
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.fromLTRB(0, 0, 0, 60),
+              child: const Image(
+                image: AssetImage("images/logo.png"),
+                width: 250.0,
+                fit: BoxFit.fitHeight,
+                // color: Colors.red,
+                // colorBlendMode: BlendMode.multiply,
+              ),
+            ),
+            Container(
+              child: const Text(
+                "LOGIN",
+                style: TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.w900,
+                  color: Color(0xff454545),
+                ),
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.fromLTRB(50, 50, 50, 0),
               width: 400,
               child: TextField(
                 decoration: InputDecoration(
-                    fillColor: Color.fromARGB(150, 215, 246, 240),
+                    fillColor: const Color.fromARGB(150, 215, 246, 240),
                     filled: true,
                     // prefixIcon: Icon(Icons.person),
                     // prefixText: "USERNAME : ",
-                    prefixStyle: TextStyle(
+                    prefixStyle: const TextStyle(
                         color: Colors.black87, fontWeight: FontWeight.w900),
                     labelText: "USERNAME : ",
-                    labelStyle: TextStyle(
+                    labelStyle: const TextStyle(
                         color: Colors.black87, fontWeight: FontWeight.w900),
                     // hintText: "Masukkan Nama lengkap",
-                    hintStyle: TextStyle(fontSize: 12),
+                    hintStyle: const TextStyle(fontSize: 12),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10))),
                 // obscureText: true,
@@ -59,21 +67,21 @@ class LoginPage extends StatelessWidget {
             ),
             Container(
               width: 400,
-              margin: EdgeInsets.fromLTRB(0, 30, 0, 50),
+              margin: const EdgeInsets.fromLTRB(50, 30, 50, 50),
               child: TextField(
                 decoration: InputDecoration(
-                    fillColor: Color.fromARGB(150, 215, 246, 240),
+                    fillColor: const Color.fromARGB(150, 215, 246, 240),
                     // fillColor: Color(0xffD7F6F0),
                     filled: true,
                     // prefixIcon: Icon(Icons.password),
                     // prefixText: "PASSWORD : ",
-                    prefixStyle: TextStyle(
+                    prefixStyle: const TextStyle(
                         color: Colors.black87, fontWeight: FontWeight.w900),
                     labelText: "PASSWORD : ",
-                    labelStyle: TextStyle(
+                    labelStyle: const TextStyle(
                         color: Colors.black87, fontWeight: FontWeight.w900),
                     // hintText: "Masukkan Nama lengkap",
-                    hintStyle: TextStyle(fontSize: 12),
+                    hintStyle: const TextStyle(fontSize: 12),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10))),
                 // obscureText: true,
@@ -84,7 +92,7 @@ class LoginPage extends StatelessWidget {
             Container(
               width: 400,
               height: 50,
-              padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+              padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
               // alignment: Alignment(0, 0.2),
               child: ElevatedButton(
                 style: ButtonStyle(
@@ -95,8 +103,8 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                     backgroundColor:
-                        MaterialStateProperty.all(Color(0xffDAA65E))),
-                child: Text(
+                        MaterialStateProperty.all(const Color(0xffDAA65E))),
+                child: const Text(
                   "LOGIN",
                   style: TextStyle(
                     // fontSize: 25,
@@ -108,7 +116,7 @@ class LoginPage extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return HomePage();
+                        return const Mainpage();
                       },
                     ),
                   );
@@ -121,22 +129,3 @@ class LoginPage extends StatelessWidget {
     );
   }
 }
-
-// class TF extends StatelessWidget {
-//   final Widget child;
-//   const TF({
-//     Key? key,
-//     required this.child,
-//   }) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     Size size = MediaQuery.of(context).size;
-//     return Container(
-//         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-//         width: size.width * 0.8,
-//         decoration: BoxDecoration(
-//             color: Colors.red, borderRadius: BorderRadius.circular(29)),
-//         child: child);
-//   }
-// }

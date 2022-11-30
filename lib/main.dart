@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:storagy/login_page.dart';
+import 'package:storagy_2/login_page.dart';
 
 void main() {
   runApp(const MyApp());
